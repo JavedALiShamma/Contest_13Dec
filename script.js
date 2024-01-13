@@ -17,23 +17,35 @@ let arr = [
     // }
     // This is printed using a for Loop
     //   will try using the Map function
-    let r=arr.map(e=>{
-        if(e.profession=="developer"){
-            console.log(e);
-        };
+    // let r=arr.map(e=>{
+    //     if(e.profession=="developer"){
+    //         console.log(e);
+    //     };
+    // })
+    const rslt=arr.filter(e=>{
+        return e.profession=="developer";
+    });
+    rslt.map(e=>{
+        console.log(e);
     })
     
   }
   
   function PrintDeveloperbyForEach() {
     //Write your code here , just console.log
-    const r1=arr.forEach(e=>{
-        if(e.profession=="developer") {
-            console.log(e);
-            // return e;
-        };
-    })
+    // const r1=arr.forEach(e=>{
+    //     if(e.profession=="developer") {
+    //         console.log(e);
+    //         // return e;
+    //     };
+    // })
     // console.log(r1);
+    const rslt=arr.filter(e=>{
+        return e.profession=="developer";
+    });
+    rslt.forEach(e=>{
+        console.log(e);
+    });
   }
   
   function addData() {
@@ -49,12 +61,16 @@ let arr = [
   
   function removeAdmin() {
     //Write your code here, just console.log
-    for(let i=0;i<arr.length;i++){
-        if(arr[i].profession=="admin"){
-            arr.pop();
-        }
-    }
-    console.log(arr);
+    // for(let i=0;i<arr.length;i++){
+    //     if(arr[i].profession=="admin"){
+    //         arr.pop();
+    //     }
+    // }
+    // console.log(arr);
+    const result=arr.filter(e=>{
+        return e.profession!="admin";
+    });
+    console.log(result);
     
   }
   
